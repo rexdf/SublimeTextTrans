@@ -160,26 +160,26 @@ if sublime.platform() == 'windows':
         def on_new_async(self, view):
             global ExcuteCnt
             if stt_autoapply:
-                print("Trans new cnt: ", ExcuteCnt)
+                # print("Trans new cnt: ", ExcuteCnt)
                 sublime_opacity(stt_opacity)
 
         def on_clone_async(self, view):
             global ExcuteCnt
             if stt_autoapply:
-                print("Trans clone cnt: ", ExcuteCnt)
+                # print("Trans clone cnt: ", ExcuteCnt)
                 sublime_opacity(stt_opacity)
 
         def on_load_async(self, view):
             global ExcuteCnt
             if stt_autoapply:
-                print("Trans load cnt: ", ExcuteCnt)
+                # print("Trans load cnt: ", ExcuteCnt)
                 sublime_opacity(stt_opacity)
 
         def on_activated_async(self, view):
             global ExcuteCnt
             if stt_autoapply and ExcuteCnt < 3:
                 ExcuteCnt += 1
-                print("Trans cnt: ", ExcuteCnt)
+                # print("Trans cnt: ", ExcuteCnt)
                 sublime_opacity(stt_opacity)
 
     def plugin_loaded():
